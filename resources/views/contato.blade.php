@@ -16,8 +16,7 @@
 	<div class="row">
 		<div class="col-md-6 col-xs-12">
 			<div class="form">
-				
-				<form method="POST" action="{{ route( 'enviarContato', [ 'variavel' => 'variavel do metodo put' ] ) }}">
+				<form method="POST" action="{{ route('enviarContato', ['variavel' => '12' ])}}" accept-charset="UTF-8">
 					{{ csrf_field() }}
 					{{ method_field('PUT')}}
 					<div class="input-group">

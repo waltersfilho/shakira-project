@@ -11,7 +11,7 @@ class ContatoController extends Controller
         return view('contato');
     }
 
-    public function enviarContato(Request $request){
+    public function enviarContato(Request $request, $variavel){
 
         //colocando os dados da requisicao num array chamado $formulario
         $formulario = $request->all();
@@ -30,7 +30,7 @@ class ContatoController extends Controller
         $mensagem = $formulario['mensagem'];
 
 
-        return back()->with(['nome' => $nome, 'mensagem' => $mensagem]);
+        return response()->view('contato', ['message' => 'voce enviou o formulario abiguinho']);
 
 
 
